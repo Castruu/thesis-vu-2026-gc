@@ -39,6 +39,7 @@ gc_ref gc_host_make_free_block(gc_host *host, gc_ref start, gc_ref end);
 
 uint32_t gc_host_object_length(gc_host *host, gc_ref obj);
 uint64_t gc_host_object_bytes(gc_host *host, gc_ref obj);
+gc_ref gc_host_heap_base(gc_host* host);
 
 // gc implemented
 
