@@ -1,0 +1,6800 @@
+// family=density
+// iterations=50000
+// keeper_slots=64
+// ref_ratio=0.5
+// seed=13
+// size_max=64
+// size_min=4
+// survival=0.05
+// table_size=256
+
+.constant
+    c_256 256
+    c_29472 29472
+    c_22190 22190
+    c_23865 23865
+    c_13662 13662
+    c_600 600
+    c_27464 27464
+    c_19468 19468
+    c_25599 25599
+    c_10095 10095
+    c_16465 16465
+    c_2384 2384
+    c_3414 3414
+    c_27108 27108
+    c_14841 14841
+    c_21277 21277
+    c_10338 10338
+    c_7249 7249
+    c_3718 3718
+    c_7493 7493
+    c_31202 31202
+    c_11486 11486
+    c_8246 8246
+    c_27012 27012
+    c_10339 10339
+    c_28095 28095
+    c_17066 17066
+    c_13955 13955
+    c_376 376
+    c_3006 3006
+    c_26924 26924
+    c_14397 14397
+    c_30646 30646
+    c_15845 15845
+    c_29018 29018
+    c_18293 18293
+    c_19273 19273
+    c_13394 13394
+    c_32160 32160
+    c_3956 3956
+    c_27030 27030
+    c_17857 17857
+    c_7398 7398
+    c_23337 23337
+    c_21074 21074
+    c_29531 29531
+    c_29582 29582
+    c_15433 15433
+    c_20767 20767
+    c_8372 8372
+    c_21707 21707
+    c_14950 14950
+    c_17265 17265
+    c_12763 12763
+    c_20607 20607
+    c_25102 25102
+    c_11580 11580
+    c_22441 22441
+    c_22363 22363
+    c_30640 30640
+    c_2437 2437
+    c_30356 30356
+    c_25712 25712
+    c_24488 24488
+    c_25650 25650
+    c_7869 7869
+    c_32070 32070
+    c_2943 2943
+    c_7827 7827
+    c_6226 6226
+    c_32764 32764
+    c_6363 6363
+    c_15307 15307
+    c_2900 2900
+    c_5947 5947
+    c_29943 29943
+    c_5675 5675
+    c_30033 30033
+    c_27972 27972
+    c_18166 18166
+    c_7954 7954
+    c_1923 1923
+    c_14160 14160
+    c_22390 22390
+    c_32731 32731
+    c_2669 2669
+    c_20204 20204
+    c_21914 21914
+    c_8000 8000
+    c_17730 17730
+    c_11751 11751
+    c_8279 8279
+    c_26302 26302
+    c_14073 14073
+    c_8432 8432
+    c_11578 11578
+    c_11683 11683
+    c_16594 16594
+    c_32735 32735
+    c_13101 13101
+    c_20593 20593
+    c_17112 17112
+    c_29275 29275
+    c_7225 7225
+    c_23491 23491
+    c_6446 6446
+    c_23739 23739
+    c_3865 3865
+    c_15857 15857
+    c_21678 21678
+    c_16347 16347
+    c_1873 1873
+    c_7535 7535
+    c_22330 22330
+    c_13796 13796
+    c_1867 1867
+    c_807 807
+    c_18664 18664
+    c_3325 3325
+    c_7674 7674
+    c_16331 16331
+    c_11358 11358
+    c_2889 2889
+    c_29149 29149
+    c_9440 9440
+    c_21931 21931
+    c_4335 4335
+    c_5934 5934
+    c_25468 25468
+    c_22195 22195
+    c_14207 14207
+    c_22303 22303
+    c_27187 27187
+    c_10603 10603
+    c_3168 3168
+    c_19523 19523
+    c_23054 23054
+    c_14447 14447
+    c_32574 32574
+    c_3178 3178
+    c_8559 8559
+    c_29323 29323
+    c_7093 7093
+    c_6115 6115
+    c_4928 4928
+    c_16581 16581
+    c_13757 13757
+    c_24304 24304
+    c_31737 31737
+    c_30988 30988
+    c_19815 19815
+    c_9784 9784
+    c_22275 22275
+    c_8259 8259
+    c_22665 22665
+    c_6377 6377
+    c_29546 29546
+    c_7146 7146
+    c_29732 29732
+    c_7465 7465
+    c_23665 23665
+    c_3439 3439
+    c_30567 30567
+    c_31746 31746
+    c_17874 17874
+    c_1053 1053
+    c_16050 16050
+    c_16567 16567
+    c_3360 3360
+    c_31555 31555
+    c_31591 31591
+    c_30340 30340
+    c_19461 19461
+    c_15180 15180
+    c_18396 18396
+    c_2856 2856
+    c_18577 18577
+    c_30032 30032
+    c_9850 9850
+    c_20792 20792
+    c_22939 22939
+    c_14852 14852
+    c_1165 1165
+    c_23581 23581
+    c_12969 12969
+    c_8254 8254
+    c_13701 13701
+    c_7530 7530
+    c_8086 8086
+    c_18311 18311
+    c_13679 13679
+    c_5474 5474
+    c_32009 32009
+    c_17990 17990
+    c_19603 19603
+    c_9477 9477
+    c_27172 27172
+    c_24934 24934
+    c_24712 24712
+    c_19867 19867
+    c_9113 9113
+    c_7416 7416
+    c_21729 21729
+    c_4963 4963
+    c_17111 17111
+    c_848 848
+    c_10312 10312
+    c_31425 31425
+    c_8095 8095
+    c_30943 30943
+    c_13547 13547
+    c_14176 14176
+    c_25546 25546
+    c_9611 9611
+    c_23983 23983
+    c_16264 16264
+    c_11245 11245
+    c_7402 7402
+    c_31321 31321
+    c_25157 25157
+    c_23584 23584
+    c_32298 32298
+    c_18070 18070
+    c_16220 16220
+    c_15376 15376
+    c_3084 3084
+    c_17091 17091
+    c_11291 11291
+    c_2924 2924
+    c_14365 14365
+    c_10195 10195
+    c_25435 25435
+    c_21561 21561
+    c_31587 31587
+    c_29700 29700
+    c_14854 14854
+    c_29525 29525
+    c_16574 16574
+    c_9217 9217
+    c_9423 9423
+    c_19520 19520
+    c_18524 18524
+    c_5121 5121
+    c_4432 4432
+    c_11431 11431
+    c_9348 9348
+    c_17477 17477
+    c_19287 19287
+    c_17306 17306
+    c_20319 20319
+    c_31134 31134
+    c_24637 24637
+    c_10216 10216
+    c_3113 3113
+    c_50000 50000
+.end-constant
+
+.main
+.var
+    size_tbl
+    kind_tbl
+    surv_tbl
+    vict_tbl
+    fill_tbl
+    keeper
+    tmp
+    length
+    fillv
+    j
+    idx
+    ctr
+    run
+.end-var
+    // build allocation size table (256 entries)
+    LDC_W c_256
+    NEWARRAY
+    ISTORE size_tbl
+    BIPUSH 0
+    ISTORE run
+    BIPUSH 20
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 22
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 47
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 62
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 47
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 55
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 58
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 60
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 15
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 45
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 18
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 46
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 13
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 59
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 18
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 45
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 50
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 15
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 12
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 8
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 38
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 58
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 17
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 51
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 22
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 5
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 31
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 12
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 57
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 47
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 42
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 4
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 21
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 57
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 13
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 9
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 59
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 54
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 55
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 60
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 55
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 20
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 56
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 32
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 51
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 31
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 64
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 12
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 54
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 60
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 20
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 26
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 58
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 18
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 35
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 61
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 52
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 39
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 40
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 31
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 46
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 27
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 60
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 31
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 44
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 24
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 45
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 11
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 26
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 56
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 42
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 55
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 44
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 20
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 48
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 32
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 39
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 43
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 51
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 12
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 32
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 47
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 50
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 32
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 38
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 15
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 22
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 16
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 15
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 37
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 26
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 20
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 27
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 33
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 20
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 42
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 21
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 29
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 60
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 12
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 40
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 35
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 39
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 19
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 40
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 19
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 60
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 16
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 48
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 27
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 12
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 8
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 31
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 45
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 44
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 33
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 28
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 4
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 50
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 31
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 63
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 59
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 6
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 18
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 13
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 35
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 55
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 48
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 57
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 32
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 44
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 20
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 14
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 50
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 30
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 51
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 59
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 20
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 60
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 52
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 55
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 26
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 16
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 49
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 58
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 44
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 27
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 37
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 49
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 46
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 12
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 61
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 49
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 42
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 19
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 50
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 35
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 17
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 59
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 43
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 6
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 41
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 48
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 41
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 6
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 26
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 41
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 50
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 40
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 25
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 15
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 22
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 16
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 14
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 54
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 47
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 39
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 11
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 61
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 18
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 14
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 8
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 31
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 45
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 42
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 39
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 55
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 38
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 48
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 6
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 32
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 56
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 25
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 45
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 9
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 37
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 4
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 12
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 23
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 11
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 30
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 23
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 62
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 21
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 40
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 42
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 48
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 8
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 64
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 34
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 37
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 27
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 58
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 57
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 6
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 4
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 24
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 25
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 13
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 35
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 39
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 38
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 37
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 56
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 34
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 18
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 46
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 17
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 22
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 55
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 6
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 28
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 36
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 49
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 62
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 14
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 51
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 13
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 20
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 31
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 47
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 56
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 58
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 17
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 20
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 31
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 41
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 19
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 26
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 53
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 19
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 41
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 22
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 31
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 17
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 45
+    ILOAD run
+    ILOAD size_tbl
+    IASTORE
+    IINC run 1
+    // build array kind (1 = reference array) table (256 entries)
+    LDC_W c_256
+    NEWARRAY
+    ISTORE kind_tbl
+    BIPUSH 0
+    ISTORE run
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD kind_tbl
+    IASTORE
+    IINC run 1
+    // build survival flag (fixed fraction) table (256 entries)
+    LDC_W c_256
+    NEWARRAY
+    ISTORE surv_tbl
+    BIPUSH 0
+    ISTORE run
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD surv_tbl
+    IASTORE
+    IINC run 1
+    // build keeper victim slot table (256 entries)
+    LDC_W c_256
+    NEWARRAY
+    ISTORE vict_tbl
+    BIPUSH 0
+    ISTORE run
+    BIPUSH 54
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 36
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 29
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 55
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 15
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 61
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 31
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 13
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 8
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 26
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 14
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 42
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 27
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 21
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 11
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 44
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 51
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 31
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 24
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 40
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 15
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 10
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 41
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 52
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 59
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 53
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 49
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 51
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 9
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 46
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 52
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 22
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 33
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 37
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 48
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 61
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 8
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 18
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 8
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 45
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 42
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 45
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 53
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 53
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 49
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 20
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 13
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 27
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 50
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 13
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 26
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 15
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 50
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 52
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 62
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 26
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 51
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 9
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 34
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 57
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 56
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 46
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 24
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 36
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 63
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 35
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 23
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 47
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 36
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 43
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 33
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 23
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 5
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 40
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 11
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 18
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 29
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 33
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 37
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 46
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 3
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 61
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 11
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 22
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 48
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 59
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 54
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 44
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 53
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 12
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 2
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 33
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 22
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 30
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 8
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 2
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 13
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 53
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 30
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 22
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 26
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 58
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 23
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 42
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 13
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 55
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 10
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 15
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 54
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 51
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 6
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 57
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 37
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 8
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 39
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 32
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 26
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 14
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 61
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 9
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 59
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 4
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 37
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 56
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 21
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 46
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 63
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 25
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 33
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 59
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 53
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 40
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 34
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 48
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 19
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 41
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 4
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 10
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 62
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 26
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 54
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 37
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 44
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 54
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 26
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 49
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 6
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 61
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 52
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 42
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 35
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 39
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 9
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 54
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 10
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 6
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 39
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 30
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 26
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 9
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 56
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 2
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 16
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 59
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 62
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 26
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 0
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 13
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 23
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 4
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 16
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 37
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 38
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 4
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 57
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 56
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 12
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 37
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 49
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 29
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 4
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 1
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 62
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 35
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 61
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 23
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 18
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 23
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 13
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 3
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 43
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 3
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 5
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 34
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 20
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 35
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 40
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 49
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 45
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 29
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 26
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 36
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 28
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 41
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 41
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 9
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 48
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 22
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 5
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 16
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 25
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 59
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 60
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 32
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 5
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 10
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 7
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 9
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 34
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 60
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 12
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 60
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 44
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 32
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 60
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 3
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 16
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 41
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 37
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 22
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 37
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 49
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 32
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 44
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 53
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 59
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 51
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 21
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 27
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 8
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 21
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 59
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 30
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 54
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 19
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 18
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 5
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 41
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 18
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 43
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 13
+    ILOAD run
+    ILOAD vict_tbl
+    IASTORE
+    IINC run 1
+    // build value-array fill value table (256 entries)
+    LDC_W c_256
+    NEWARRAY
+    ISTORE fill_tbl
+    BIPUSH 0
+    ISTORE run
+    LDC_W c_29472
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_22190
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_23865
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 77
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_13662
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_600
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_27464
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_19468
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_25599
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_10095
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_16465
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_2384
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_3414
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_27108
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_14841
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_21277
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_10338
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_7249
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_3718
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_7493
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_31202
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_11486
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_8246
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_27012
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_10339
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_28095
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_17066
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_13955
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_376
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_3006
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_26924
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_14397
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_30646
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_15845
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_29018
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_18293
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_19273
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_13394
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_32160
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_3956
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_27030
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_17857
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_7398
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_23337
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_21074
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_29531
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_29582
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_15433
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_20767
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_8372
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_21707
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_14950
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_17265
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_12763
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_20607
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_25102
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_11580
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_22441
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_22363
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_30640
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_2437
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_30356
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_25712
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_24488
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_25650
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_7869
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_32070
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_2943
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_7827
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_6226
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_32764
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_6363
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_15307
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_2900
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_5947
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_29943
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_5675
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_30033
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_27972
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_18166
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_7954
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_1923
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_14160
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_22390
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_32731
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_2669
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_20204
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_21914
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_8000
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_17730
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_11751
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_8279
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_26302
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_14073
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_8432
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_11578
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_11683
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_16594
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_32735
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_13101
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_20593
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_17112
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_29275
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_7225
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_23491
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_6446
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_23739
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_3865
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_15857
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_21678
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_16347
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_1873
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_7535
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_22330
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_13796
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_1867
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_807
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_18664
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_3325
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_7674
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_16331
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_11358
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_2889
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_29149
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_9440
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_21931
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_4335
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_5934
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_25468
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_22195
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_14207
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_22303
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_27187
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_10603
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_3168
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_19523
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_23054
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_14447
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_32574
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 72
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_3178
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_8559
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_29323
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_7093
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_6115
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_4928
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_16581
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_13757
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_24304
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_31737
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_30988
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_19815
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_9784
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_22275
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_8259
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_22665
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_6377
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_29546
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_7146
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_29732
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_7465
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_23665
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_3439
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_30567
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_31746
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_17874
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_1053
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_16050
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_16567
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_3360
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_31555
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_31591
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_30340
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_19461
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_15180
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_18396
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_2856
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_18577
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_30032
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_9850
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_20792
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_22939
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_14852
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_1165
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_23581
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_12969
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_8254
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_13701
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_7530
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_8086
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_18311
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_13679
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_5474
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_32009
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_17990
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_19603
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_9477
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_27172
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_24934
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_24712
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_19867
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_9113
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_7416
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_21729
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_4963
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_17111
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_848
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_10312
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_31425
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_8095
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_30943
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_13547
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_14176
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_25546
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_9611
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_23983
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_16264
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_11245
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_7402
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_31321
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    BIPUSH 64
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_25157
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_23584
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_32298
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_18070
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_16220
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_15376
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_3084
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_17091
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_11291
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_2924
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_14365
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_10195
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_25435
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_21561
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_31587
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_29700
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_14854
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_29525
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_16574
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_9217
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_9423
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_19520
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_18524
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_5121
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_4432
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_11431
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_9348
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_17477
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_19287
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_17306
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_20319
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_31134
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_24637
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_10216
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    LDC_W c_3113
+    ILOAD run
+    ILOAD fill_tbl
+    IASTORE
+    IINC run 1
+    // long-lived keeper array: holds the surviving fraction
+    BIPUSH 64
+    ANEWARRAY
+    ISTORE keeper
+    BIPUSH 0
+    ISTORE idx
+    // main loop: same allocations either kind, churn-style liveness
+    LDC_W c_50000
+    ISTORE ctr
+loop_1:
+    ILOAD ctr
+    IFEQ done_2
+    ILOAD idx
+    ILOAD size_tbl
+    IALOAD
+    ISTORE length
+    ILOAD idx
+    ILOAD fill_tbl
+    IALOAD
+    ISTORE fillv
+    ILOAD idx
+    ILOAD kind_tbl
+    IALOAD
+    IFEQ valarr_3
+    // reference array: every slot points at the live keeper array
+    ILOAD length
+    ANEWARRAY
+    ISTORE tmp
+    ILOAD length
+    ISTORE j
+fill_5:
+    ILOAD j
+    IFEQ filled_6
+    IINC j -1
+    ILOAD keeper
+    ILOAD j
+    ILOAD tmp
+    AIASTORE
+    GOTO fill_5
+filled_6:
+    GOTO kinddone_4
+valarr_3:
+    // value array: every slot gets the seeded fill value
+    ILOAD length
+    NEWARRAY
+    ISTORE tmp
+    ILOAD length
+    ISTORE j
+fill_7:
+    ILOAD j
+    IFEQ filled_8
+    IINC j -1
+    ILOAD fillv
+    ILOAD j
+    ILOAD tmp
+    IASTORE
+    GOTO fill_7
+filled_8:
+kinddone_4:
+    // survival decision, as in churn
+    ILOAD idx
+    ILOAD surv_tbl
+    IALOAD
+    IFEQ skip_9
+    ILOAD tmp
+    ILOAD idx
+    ILOAD vict_tbl
+    IALOAD
+    ILOAD keeper
+    AIASTORE
+skip_9:
+    IINC idx 1
+    ILOAD idx
+    LDC_W c_256
+    IF_ICMPEQ wrap_10
+    GOTO nowrap_11
+wrap_10:
+    BIPUSH 0
+    ISTORE idx
+nowrap_11:
+    IINC ctr -1
+    GOTO loop_1
+done_2:
+    // clean termination
+    HALT
+.end-main
