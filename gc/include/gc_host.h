@@ -11,6 +11,7 @@ typedef struct IJVM gc_host;
 typedef struct gc_collector gc_collector;
 #define GC_NULL 0u
 #define GC_HOST_FULL_SENTINEL UINT32_MAX
+#define GC_HOST_HEADER_SIZE 8u
 
 // vm implemented
 gc_ref gc_host_raw_alloc(gc_host *host, uint32_t length, uint8_t is_ref);
@@ -36,6 +37,10 @@ void gc_host_move_object(gc_host* host, gc_ref from, gc_ref to);
 void gc_host_init_object(gc_host* host, gc_ref ref, uint32_t length, uint32_t tags);
 gc_ref gc_host_split_block(gc_host* host, gc_ref ref, uint32_t length, uint8_t is_ref);
 gc_ref gc_host_make_free_block(gc_host *host, gc_ref start, gc_ref end);
+
+void gc_host_set_forwarded(gc_host *host, gc_ref obj, gc_ref new_offset);
+uint8_t gc_host_is_forwarded(gc_host *host, gc_ref obj);
+gc_ref gc_host_get_forwarded(gc_host *host, gc_ref obj);
 
 uint32_t gc_host_object_length(gc_host *host, gc_ref obj);
 uint64_t gc_host_object_bytes(gc_host *host, gc_ref obj);
