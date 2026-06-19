@@ -10,7 +10,6 @@ gc_ref gc_alloc(gc_collector *collector, gc_host *host, uint32_t length, uint8_t
         gc_collect(collector, host);
         alloc_pos = collector->alloc(collector, host, length, is_ref);
     }
-
     if(alloc_pos != GC_HOST_FULL_SENTINEL) {
         gc_stats_count_alloc(gc_host_object_bytes(host, alloc_pos), gc_host_watermark(host));
     }

@@ -24,7 +24,6 @@ static void baseline_write_barrier(gc_collector* self, gc_host* host, gc_ref obj
 }
 
 gc_collector* baseline_create(void) {
-    printf("baseline GENERATOR!");
     gc_collector* c = calloc(1, sizeof(gc_collector));
     c->alloc = baseline_alloc;
     c->write_barrier = baseline_write_barrier;

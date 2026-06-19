@@ -24,7 +24,6 @@ static void mark_compact_write_barrier(gc_collector* self, gc_host* host, gc_ref
 }
 
 gc_collector* mark_compact_create(void) {
-    printf("mark_compact GENERATOR!");
     gc_collector* c = calloc(1, sizeof(gc_collector));
     c->alloc = mark_compact_alloc;
     c->write_barrier = mark_compact_write_barrier;
