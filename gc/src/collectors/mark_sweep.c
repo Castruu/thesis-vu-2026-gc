@@ -98,7 +98,8 @@ static uint64_t count_free_list_bytes(gc_host *host,
   return total;
 }
 
-static void visit_refs(gc_host *host, gc_ref *slot) {
+static void visit_refs(gc_host *host, gc_ref *slot, void *ctx) {
+  (void)ctx;
   if (gc_host_is_marked(host, *slot)) {
     return;
   }
@@ -107,7 +108,8 @@ static void visit_refs(gc_host *host, gc_ref *slot) {
   gc_host_enumerate_object_refs(host, *slot, visit_refs, NULL);
 }
 
-static void visit_root(gc_host *host, gc_ref *root) {
+static void visit_root(gc_host *host, gc_ref *root, void *ctx) {
+  (void)ctx;
   if (gc_host_is_marked(host, *root)) {
     return;
   }
@@ -149,7 +151,8 @@ static void sweep(gc_collector *self, gc_host *host, gc_collect_stats *out) {
   }
 
   if (run_start != GC_HOST_FULL_SENTINEL) {
-    gc_ref block = gc_host_make_free_block(host, run_start, gc_host_watermark(host));
+    gc_ref block =
+        gc_host_make_free_block(host, run_start, gc_host_watermark(host));
     uint64_t size = gc_host_object_bytes(host, block);
     free_after += size;
     if (size > largest)

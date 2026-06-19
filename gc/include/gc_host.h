@@ -15,9 +15,9 @@ typedef struct gc_collector gc_collector;
 // vm implemented
 gc_ref gc_host_raw_alloc(gc_host *host, uint32_t length, uint8_t is_ref);
 void gc_host_enumerate_roots(gc_host *host,
-                             void (*visit)(gc_host *host, gc_ref *slot), void *ctx);
+                             void (*visit)(gc_host *host, gc_ref *slot, void *ctx), void *ctx);
 void gc_host_enumerate_object_refs(gc_host *, gc_ref obj,
-                                   void (*visit)(gc_host *host, uint32_t *slot),
+                                   void (*visit)(gc_host *host, uint32_t *slot, void *ctx),
                                    void *ctx);
 
 gc_ref gc_host_heap_first(gc_host *host);
