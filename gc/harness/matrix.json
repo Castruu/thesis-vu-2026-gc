@@ -1,5 +1,5 @@
 {
-  "collector": ["baseline", "mark_sweep", "mark_compact", "cheney"],
+  "collector": ["baseline", "mark_sweep", "mark_compact", "cheney", "generational"],
   "budget": [16384, 32768, 65536, 131072, 262144, 524288, 1048576, 8388608],
   "workload": ["churn", "longlived", "mutate", "density"],
   "seed": [1, 7, 13, 42, 101, 271, 1009, 9973],

@@ -1,2 +1,2 @@
 run_ns,mutator_ns,instructions,bytes_allocated,alloc_count,peak_watermark,peak_live_bytes,collections,total_pause_ns,max_pause_ns,bytes_freed_total,bytes_moved_total,exit_status
-35843000,35715000,1384575,1591168,11589,524280,16236,3,128000,44000,1524296,0,1
+32061000,31944000,1384575,1591168,11589,524280,16236,3,117000,40000,1524296,0,1

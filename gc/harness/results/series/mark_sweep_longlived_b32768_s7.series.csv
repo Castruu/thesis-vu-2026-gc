@@ -1,2 +1,2 @@
 t_ns,dur_ns,bytes_freed,bytes_moved,live_bytes,free_bytes,largest_free_chunk
-103000,11000,0,0,32752,0,0
+99000,10000,0,0,32752,0,0

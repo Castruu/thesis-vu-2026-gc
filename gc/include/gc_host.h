@@ -41,6 +41,10 @@ gc_ref gc_host_make_free_block(gc_host *host, gc_ref start, gc_ref end);
 void gc_host_set_forwarded(gc_host *host, gc_ref obj, gc_ref new_offset);
 uint8_t gc_host_is_forwarded(gc_host *host, gc_ref obj);
 gc_ref gc_host_get_forwarded(gc_host *host, gc_ref obj);
+int32_t gc_host_get_value(gc_host *host, gc_ref position, uint32_t index);
+void gc_host_set_value(gc_host *host, gc_ref position, uint32_t index, int32_t value);
+
+
 
 uint32_t gc_host_object_length(gc_host *host, gc_ref obj);
 uint64_t gc_host_object_bytes(gc_host *host, gc_ref obj);
