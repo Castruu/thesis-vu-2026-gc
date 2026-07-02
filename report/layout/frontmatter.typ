@@ -1,5 +1,5 @@
 #import "/layout/fonts.typ": *
-#import "/metadata.typ": title, degree, program, author, authorId, supervisorFirst, supervisorDaily, readerSecond
+#import "/metadata.typ": author, authorId, degree, program, readerSecond, supervisorFirst, title
 
 #let addfrontmatter() = {
   set page(
@@ -39,25 +39,27 @@
     columns: 2,
     row-gutter: 0.3em,
     column-gutter: 0.5em,
-    align: (right, left),
-    emph[First supervisor:],  supervisorFirst,
-    emph[Daily supervisor:],  supervisorDaily,
-    emph[Second reader:],     readerSecond,
+    align: (left, left),
+    emph[First supervisor:], supervisorFirst,
+    emph[Second reader:], readerSecond,
   ))
 
   v(1fr)
 
-  align(center, emph(text(size: 11pt,
-    "Submitted in partial fulfillment of the requirements for " +
-    "the VU " + degree-name + " degree in " + program
+  align(center, emph(text(
+    size: 11pt,
+    "Submitted in fulfillment of the requirements for"
+      + linebreak()
+      + "the VU "
+      + degree-name
+      + " degree in "
+      + program,
   )))
 
   v(1em)
   v(1fr)
 
-  align(center, text(size: 11pt,
-    datetime.today().display("[month repr:long] [day padding:none], [year]")
-  ))
+  align(center, text(size: 11pt, datetime.today().display("[month repr:long] [day padding:none], [year]")))
 
   pagebreak()
 }

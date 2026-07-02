@@ -1,0 +1,23 @@
+%YAML 1.2
+---
+# Highlighting for the collector pseudocode listings in content/background.typ.
+name: Pseudocode
+file_extensions:
+  - pseudo
+scope: source.pseudo
+contexts:
+  main:
+    - match: '//.*$'
+      scope: comment.line.double-slash.pseudo
+    - match: '\b(if|else|while|for|return)\b'
+      scope: keyword.control.pseudo
+    - match: '\b(in|is|and|or|not)\b'
+      scope: keyword.operator.word.pseudo
+    - match: '<-'
+      scope: keyword.operator.assignment.pseudo
+    - match: '\b(FULL_HEAP_SENTINEL|NULL)\b'
+      scope: constant.language.pseudo
+    - match: '\b\d+\b'
+      scope: constant.numeric.pseudo
+    - match: '\b[A-Za-z_][A-Za-z0-9_]*(?=\()'
+      scope: entity.name.function.pseudo

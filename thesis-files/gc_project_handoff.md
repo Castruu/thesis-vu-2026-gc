@@ -31,7 +31,7 @@ they're maintained internally (that's `VM_NOTES.md`).
   bound: `< UINT32_MAX` (~4 GB), far beyond any benchmark budget. (>4 GB would need handle
   tables — OUT OF SCOPE.)
 - **Object header (`heap_array`):** `{ uint32_t length; uint32_t tags; }` = 8 bytes, followed
-  inline by `length` × `int32_t` elements. `tags` bits: `TAG_REFERENCE (1u<<0)`,
+  inline by `length` $\times$ `int32_t` elements. `tags` bits: `TAG_REFERENCE (1u<<0)`,
   `TAG_MARKED (1u<<1)`, `TAG_FREE (1u<<2)` — independent bits (a chunk can be reference-array
   AND free at once).
 - **Layout is walkable:** objects are contiguous and 4-aligned (the 8-byte header keeps

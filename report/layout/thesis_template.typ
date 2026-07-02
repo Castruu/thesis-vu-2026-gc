@@ -1,24 +1,14 @@
 #import "/layout/frontmatter.typ": addfrontmatter
-#import "/layout/acknowledgement.typ": acknowledgement as acknowledgement_layout
 #import "/layout/abstract.typ": abstract as render-abstract
-#import "/utils/print_page_break.typ": *
 #import "/layout/fonts.typ": *
 #import "/utils/diagram.typ": in-outline
 #import "../utils/fr_qa_c.typ": const_counter, fr_counter, qa_counter
 
 #let thesis(
   abstract: "",
-  acknowledgement: "",
-  is_print: false,
   body,
 ) = {
   addfrontmatter()
-
-  print_page_break(print: is_print, to: "even")
-
-  acknowledgement_layout(acknowledgement)
-
-  print_page_break(print: is_print)
 
   render-abstract(lang: "en")[#abstract]
 
@@ -73,10 +63,23 @@
   set par(leading: 1em)
 
   // --- Citations ---
-  set cite(style: "alphanumeric")
+  set cite(style: "ieee")
 
   // --- Figures ---
   show figure: set text(size: 0.85em)
+
+  // --- Code / pseudocode listings ---
+  set raw(
+    syntaxes: "../utils/pseudocode.sublime-syntax",
+    theme: "../utils/pseudocode.tmTheme",
+  )
+  show raw.where(block: true): it => block(
+    fill: luma(245),
+    inset: 8pt,
+    radius: 3pt,
+    width: 100%,
+    text(size: 9pt, it),
+  )
 
   // --- Table of Contents ---
   show outline.entry.where(level: 1): it => {
@@ -118,7 +121,7 @@
     in-outline.update(false)
   }
   outline(
-    title: "",
+    title: none,
     target: figure.where(kind: image),
   )
 
@@ -128,7 +131,7 @@
       pagebreak()
       heading(numbering: none)[List of Tables]
       outline(
-        title: "",
+        title: none,
         target: figure.where(kind: table),
       )
     }
@@ -140,5 +143,9 @@
   include "/layout/appendix.typ"
 
   pagebreak()
-  bibliography("/thesis.yml")
+  heading(numbering: none)[Appendix B: Use of Generative AI Tools]
+  include "/content/ai_statement.typ"
+
+  pagebreak()
+  bibliography("/thesis.yml", style: "ieee")
 }
